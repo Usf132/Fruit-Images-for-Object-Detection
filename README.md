@@ -93,6 +93,7 @@ The Streamlit interface provides three inference modes:
 Example output:
 
 ![Produce Vision Streamlit App](assets/app_demo.jpeg)
+![Produce Vision Streamlit App](assets/app_demo_2.jpeg)
 
 ```bash
 streamlit run app.py
