@@ -1,6 +1,6 @@
 # 🍎 Produce Vision — Fruit & Vegetable Detection + Classification
 
-![Produce Vision Cover](assets/cover.png)
+![Produce Vision Cover](assets/cover.jpeg)
 
 A two-stage computer-vision pipeline built on **YOLO11**:
 
