@@ -40,7 +40,7 @@ Works on **still images** and **video**.
 
 The notebook (`fruit_detection_yolo11.ipynb`) does the full pipeline:
 
-1. **Detection data** — two Roboflow bounding-box datasets are downloaded and merged into a single YOLO-format dataset.
+1. **Detection data** — two Roboflow bounding-box datasets are downloaded and merged into a single YOLO-format dataset. Dataset 0 contributes 11 base classes; Dataset 1 contributes ripe/unripe variants of 15 classes, which are folded into the same final class (e.g. `ripe apple` + `unripe apple` → `apple`).
 2. **Detector training** — `yolo11n.pt` is fine-tuned on the merged dataset, then validated and evaluated on a held-out test split.
 3. **Classification data** — a Kaggle fruit/vegetable classification dataset is downloaded.
 4. **Classifier training** — `yolo11n-cls.pt` is fine-tuned on the classification dataset.
@@ -48,6 +48,14 @@ The notebook (`fruit_detection_yolo11.ipynb`) does the full pipeline:
 6. **Results export** — loss curves, mAP curves, PR curves, and confusion matrices for both models are saved to `results/`.
 
 To retrain or reproduce the results, open the notebook in Google Colab (recommended, GPU runtime) or a local Jupyter environment with a CUDA-capable GPU.
+
+### Detector classes (21)
+
+`apple`, `banana`, `broccoli`, `cauliflower`, `corn`, `cucumber`, `lemon`, `pepper`, `pineapple`, `strawberry`, `tomato`, `bell fruit`, `dragon fruit`, `grape`, `mango`, `mangosteen`, `orange`, `papaya`, `passion fruit`, `pomegranate`, `star fruit`
+
+**Dataset split:** 4,825 train / 839 valid / 389 test images.
+
+> **Known open issue:** the merge script flags `pepper` (Dataset 0) and `bell fruit` (Dataset 1) as low string-similarity but potentially the same real-world object — if Dataset 1's "bell fruit" label actually means bell pepper, these should be merged into one class rather than trained separately. This hasn't been visually verified yet; check a sample of "bell fruit" images before deciding whether to merge.
 
 ---
 
