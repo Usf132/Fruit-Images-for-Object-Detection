@@ -1,6 +1,6 @@
 # 🍎 Produce Vision — Fruit & Vegetable Detection + Classification
 
-![Produce Vision Cover](assets/cover.jpeg)
+![Produce Vision Cover](assets/cover.png)
 
 A two-stage computer-vision pipeline built on **YOLO11**:
 
@@ -92,8 +92,8 @@ The Streamlit interface provides three inference modes:
 
 Example output:
 
-![Produce Vision Streamlit App](assets/app_demo.jpeg)
-![Produce Vision Streamlit App](assets/app_demo_2.jpeg)
+![Produce Vision Streamlit App](assets/app_demo.png)
+![Produce Vision Streamlit App](assets/app_demo_2.png)
 
 ```bash
 streamlit run app.py
