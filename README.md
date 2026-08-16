@@ -17,23 +17,24 @@ Works on **still images** and **video**.
 
 ```
 .
-├── fruit_detection_yolo11.ipynb   # Training + evaluation notebook (Colab-ready)
-├── main.py                        # CLI inference entry point
-├── inference.py                   # Shared pipeline logic (used by main.py and app.py)
 ├── app.py                         # Streamlit web UI
-├── weights/
-│   ├── best_detect.pt             # Trained detector weights
-│   └── best_cls.pt                # Trained classifier weights
-├── results/                       # Training/evaluation plots exported from the notebook
-│   ├── detection_loss_curves.png
-│   ├── detection_map_vs_epoch.png
-│   ├── detection_confusion_matrix.png
-│   ├── detection_confusion_matrix_normalized.png
-│   ├── detection_pr_curve.png
+├── fruit_detection_yolo11.ipynb  # Training + evaluation notebook (Colab-ready)
+├── inference.py                  # Shared pipeline logic (used by main.py and app.py)
+├── main.py                       # CLI inference entry point
+├── outputs/                      # Default output folder for CLI runs (annotated images, results.json)
+├── results/                      # Training/evaluation plots exported from the notebook
 │   ├── classification_accuracy_loss.png
 │   ├── classification_confusion_matrix.png
-│   └── classification_confusion_matrix_normalized.png
-└── outputs/                       # Default output folder for CLI runs (annotated images, results.json)
+│   ├── classification_confusion_matrix_normalized.png
+│   ├── detection_confusion_matrix.png
+│   ├── detection_confusion_matrix_normalized.png
+│   ├── detection_loss_curves.png
+│   ├── detection_map_vs_epoch.png
+│   └── detection_pr_curve.png
+└── weights/
+    ├── best_cls.pt               # Trained classifier weights
+    └── best_detect.pt            # Trained detector weights
+
 ```
 
 ---
